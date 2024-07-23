@@ -11,6 +11,7 @@ namespace Blog.Repository
         public UserRepository(SqlConnection connection) : base(connection)
             => _connection = connection;
 
+        // One to many
         public List<User> ReadWithRole()
         {
             var query = @"
